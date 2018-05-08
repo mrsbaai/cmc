@@ -68,7 +68,7 @@
                             <td class="align-middle"> Tallinn, Estonia </td>
                             <td class="align-middle"> 1 Year</td>
                             <td class="align-middle">
-                                <a href="#" class="btn btn-outline-primary">Click Here</a>
+                                <a href="/hashflare" class="btn btn-outline-primary">Click Here</a>
                             </td>
                         </tr>
                         <tr>
@@ -104,7 +104,7 @@
                             <td class="align-middle"> Honk Kong</td>
                             <td class="align-middle"> 2 Years</td>
                             <td class="align-middle">
-                                <a href="#" class="btn btn-outline-primary">Click Here</a>
+                                <a href="/genesismining" class="btn btn-outline-primary">Click Here</a>
                             </td>
                         </tr>
                         <tr>
@@ -136,7 +136,7 @@
                             <td class="align-middle">Chiang Mai, Thailand</td>
                             <td class="align-middle">3 Years</td>
                             <td class="align-middle">
-                                <a href="#" class="btn btn-outline-primary">Click Here</a>
+                                <a href="/cryptominongfarm" class="btn btn-outline-primary">Click Here</a>
                             </td>
                         </tr>
                     </tbody>
@@ -153,7 +153,7 @@
                 <p class="">There have been a tremendous amount of Bitcoin cloud mining scams like the possible $500,000 Bitcoin cloud mining ponzi scheme that was uncovered.&nbsp;
                     <br>
                     <br>Potential buyers should be extremely guarded and careful before purchasing any bitcoin mining contracts.</p>
-                <a class="btn btn-lg btn-danger btn-block" href="#">Scam Services List</a>
+                <a class="btn btn-lg btn-danger btn-block" href="/badlist">Scam Services List</a>
             </div>
         </div>
     </div>
