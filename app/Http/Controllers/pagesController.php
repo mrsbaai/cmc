@@ -43,16 +43,17 @@ class pagesController extends Controller
 	
 	
 	Public function subscribe(Request $request){
-        if(!$this->valid_email($request->email)) {
-            flash()->overlay($request->email . ' Is not a valid email address.', 'Invalid E-mail!');
+		$email = Input::get('lg_email');
+        if(!$this->valid_email($email)) {
+            flash()->overlay($email . ' Is not a valid email address.', 'Invalid E-mail!');
             return redirect('/');
         }
 
 
-        $suppression = suppression::where('email', $request->email)->first();
+        $suppression = suppression::where('email', $email)->first();
 
 
-        $subscribed = subscriber::where('email', $request->email)->where('subscribed', true)->first();
+        $subscribed = subscriber::where('email', $email)->where('subscribed', true)->first();
 
 
 
@@ -63,14 +64,14 @@ class pagesController extends Controller
         }else{
 
 
-           $subscribed = subscriber::where('email', $request->email)->first();
+           $subscribed = subscriber::where('email', $email)->first();
 
            if ($subscribed ){
                $subscribed->subscribed = true;
                $subscribed->save();
            }else{
                $subscriber = new subscriber();
-               $subscriber->email = $request->email;
+               $subscriber->email = $email;
 
                $subscriber->save();
            }
