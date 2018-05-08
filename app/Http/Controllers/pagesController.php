@@ -28,33 +28,6 @@ class pagesController extends Controller
             return redirect()->intended('contact');
 	}
 	
-    Public function subscribe(Request $request){
-
-        $subscribed = subscriber::where('email', $request->email)->where('subscribed', true)->first();
-
-       if(!is_null($subscribed)) {
-            $message = "You are already subscribed.";
-            return view('message')->with('title', 'Error!')->with('content',$message)->with('titleClass','text-danger');
-
-        }else{
-           $subscribed = subscriber::where('email', $request->email)->first();
-           if ($subscribed ){
-               $subscribed->subscribed = true;
-               $subscribed->save();
-           }else{
-               $subscriber = new subscriber();
-               $subscriber->email = $request->email;
-               $subscriber->save();
-           }
-
-
-            $message = "Thank you for your subscription.";
-            return view('message')->with('title', 'Subscribed Successfully!')->with('content',$message)->with('titleClass','text-success');
-
-        }
-
-
-        }
 		
 	Public function showcontact(){
 		return view('contact');
@@ -67,4 +40,63 @@ class pagesController extends Controller
 	Public function Home(){
 		return view('home');
 	}
+	
+	
+	Public function subscribe(Request $request){
+
+        if(!$this->valid_email($request->email)) {
+            flash()->overlay($request->email . ' Is not a valid email address.', 'Invalid E-mail!');
+            return redirect('/');
+        }
+
+
+        $suppression = suppression::where('email', $request->email)->first();
+
+
+        $subscribed = subscriber::where('email', $request->email)->where('subscribed', true)->first();
+
+
+
+       if(!is_null($subscribed)) {
+           flash()->overlay('Your e-mail already exists in our database.', 'Already subscribed!');
+           return redirect('/');
+
+        }else{
+
+
+           $subscribed = subscriber::where('email', $request->email)->first();
+
+           if ($subscribed ){
+               $subscribed->subscribed = true;
+               $subscribed->save();
+           }else{
+               $subscriber = new subscriber();
+               $subscriber->email = $request->email;
+
+               $subscriber->save();
+           }
+
+          
+           flash()->overlay('You have been subscribed successfully. Please check your e-mail for confirmation.', 'Thank you for your subscription!');
+
+           return redirect('/subscribed');
+
+
+       }
+
+
+       }
+	   
+	public function valid_email($email) {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
+            list($user, $domain ) = explode( '@', $email );
+            if(checkdnsrr( $domain, 'mx')) {
+
+            return true;
+            };
+        }else{
+            return false;
+        }
+    }
 }
