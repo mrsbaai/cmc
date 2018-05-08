@@ -46,7 +46,8 @@ class pagesController extends Controller
 		$email = Input::get('lg_email');
 
         if(!$this->valid_email($email)) {
-            flash()->($email . ' Is not a valid email address.');
+
+            flash($email . ' Is not a valid email address.');
             return redirect()->intended('/');
         }
 
@@ -56,7 +57,7 @@ class pagesController extends Controller
 
 
        if(!is_null($subscribed)) {
-           flash()->('Your e-mail already exists in our database.');
+           flash('Your e-mail already exists in our database.');
           return redirect()->intended('/');
 
         }else{
@@ -75,7 +76,7 @@ class pagesController extends Controller
            }
 
           
-           flash()->('You have been subscribed successfully!');
+           flash('You have been subscribed successfully!');
            return redirect()->intended('/');
 
 
