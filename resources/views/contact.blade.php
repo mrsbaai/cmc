@@ -17,6 +17,7 @@
           <h1 class="text-gray-dark">Contact Us</h1>
           <p class="lead mb-4">Complete all the fields below to send us a message</p>
          {{ Form::open(array('action' => 'pagesController@savecontact', 'id' => 'contact-form', 'class' => 'text-left'))}}
+		 @include('flash::message')
                     <div class="login-group">
                         <div class="form-group">
                             <label for="lg_email" class="sr-only">Email</label>
