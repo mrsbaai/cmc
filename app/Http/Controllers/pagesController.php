@@ -51,9 +51,6 @@ class pagesController extends Controller
         }
 
 
-        $suppression = suppression::where('email', $email)->first();
-
-
         $subscribed = subscriber::where('email', $email)->where('subscribed', true)->first();
 
 
