@@ -43,7 +43,7 @@ class pagesController extends Controller
 	
 	
 	Public function subscribe(Request $request){
-
+return "5555";
         if(!$this->valid_email($request->email)) {
             flash()->overlay($request->email . ' Is not a valid email address.', 'Invalid E-mail!');
             return redirect('/');
