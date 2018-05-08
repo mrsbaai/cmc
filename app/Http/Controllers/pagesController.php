@@ -44,6 +44,7 @@ class pagesController extends Controller
 	
 	Public function subscribe(Request $request){
 		$email = Input::get('lg_email');
+
         if(!$this->valid_email($email)) {
             flash()->overlay($email . ' Is not a valid email address.', 'Invalid E-mail!');
             return redirect('/');

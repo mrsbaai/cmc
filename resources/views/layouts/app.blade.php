@@ -58,7 +58,7 @@
          
 			{{ Form::open(array('action' => 'pagesController@subscribe', 'id' => 'subscribe-form', 'class' => 'form-inline'))}}
 			 <div class="form-group">
-              <input type="lg_email" class="form-control" placeholder="Your e-mail here"> 
+              <input type="email" name="lg_email" class="form-control" placeholder="Your e-mail here"> 
 			  </div>
             <button type="submit" class="btn btn-primary ml-3">Subscribe</button>
 			{{ Form::close() }}
