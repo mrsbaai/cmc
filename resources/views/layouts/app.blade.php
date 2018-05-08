@@ -45,9 +45,6 @@
       </div>
     </div>
   </nav>
-  <div class="container width-fix col-sm-12">
-            @include('flash::message')
-	</div>
 
     <div class="container col-xs-12 col-sm-12 col-lg-12 col-md-12">
         @yield('content')
