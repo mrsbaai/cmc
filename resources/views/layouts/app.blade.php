@@ -60,8 +60,8 @@
           <p class="lead">Sign up to our newsletter for the latest news</p>
           <form class="form-inline">
             <div class="form-group">
-			{{ Form::open(array('action' => 'pagesController@subscribe', 'id' => 'subscribe-form'))}}
-              <input type="email" class="form-control" placeholder="Your e-mail here"> </div>
+			{{ Form::open(array('action' => 'pagesController@savecontact', 'id' => 'contact-form', 'class' => 'text-left'))}}
+            <input type="email" class="form-control" placeholder="Your e-mail here"> </div>
             <button type="submit" class="btn btn-primary ml-3">Subscribe</button>
 			{{ Form::close() }}
           </form>
