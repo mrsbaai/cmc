@@ -4,11 +4,9 @@
 <meta name="keywords" content="cloud, mining"> @stop @section('content')
 
 <div class="py-5">
-<div class="container width-fix col-sm-12">
-	@include('flash::message')
-</div>
-    <div class="container">
 
+    <div class="container">
+		@include('flash::message')
         <div class="row mb-5">
             <div class="col-md-7">
                 <h2 class="text-primary">What is cloud mining?</h2>
