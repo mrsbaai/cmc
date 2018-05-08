@@ -58,14 +58,14 @@
       <div class="row">
         <div class="col-md-6">
           <p class="lead">Sign up to our newsletter for the latest news</p>
-          <form class="form-inline">
-            <div class="form-group">
-			
+         
 			{{ Form::open(array('action' => 'pagesController@subscribe', 'id' => 'subscribe-form'))}}
-              <input type="email" class="form-control" placeholder="Your e-mail here"> </div>
+			 <div class="form-group">
+              <input type="email" class="form-control" placeholder="Your e-mail here"> 
+			  </div>
             <button type="submit" class="btn btn-primary ml-3">Subscribe</button>
 			{{ Form::close() }}
-          </form>
+
         </div>
 		
         <div class="col-4 col-md-1 align-self-center">

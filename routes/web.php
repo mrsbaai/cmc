@@ -19,7 +19,7 @@ Route::get('/badlist','pagesController@badlist');
 Route::get('/contact','pagesController@showcontact');
 Route::post('/contact','pagesController@savecontact');
 
-Route::post('/','pagesController@subscribe');
+Route::post('subscribe','pagesController@subscribe');
 
 Route::redirect('/hashflare', 'https://hashflare.io/');
 Route::redirect('/genesismining', 'https://www.genesis-mining.com/');
