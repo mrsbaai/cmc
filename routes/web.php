@@ -18,3 +18,5 @@ Route::get('/badlist','pagesController@badlist');
 
 Route::get('/contact','pagesController@showcontact');
 Route::post('/contact','pagesController@savecontact');
+
+Route::post('subscribe','pagesController@subscribe');
