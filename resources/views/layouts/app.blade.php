@@ -59,7 +59,7 @@
         <div class="col-md-6">
           <p class="lead">Sign up to our newsletter for the latest news</p>
          
-			{{ Form::open(array('action' => 'pagesController@subscribe', 'id' => 'subscribe-form'))}}
+			{{ Form::open(array('action' => 'pagesController@subscribe', 'id' => 'subscribe-form', 'class' => 'form-inline'))}}
 			 <div class="form-group">
               <input type="email" class="form-control" placeholder="Your e-mail here"> 
 			  </div>
