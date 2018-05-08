@@ -5,7 +5,7 @@
 
 <div class="py-5">
 <div class="container width-fix col-sm-12">
-            @include('flash::message')
+	@include('flash::message')dd
 </div>
     <div class="container">
 
