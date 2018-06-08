@@ -21,6 +21,6 @@ Route::post('/contact','pagesController@savecontact');
 
 Route::post('subscribe','pagesController@subscribe');
 
-Route::redirect('/hashflare', 'https://hashflare.io/');
-Route::redirect('/genesismining', 'https://www.genesis-mining.com/');
-Route::redirect('/cryptominongfarm', 'https://www.cryptomining.farm/');
+Route::redirect('/hashflare', 'https://hashflare.io/r/88A2C90D');
+Route::redirect('/genesismining', 'https://www.genesis-mining.com/a/2330726');
+Route::redirect('/cryptominongfarm', 'https://www.cryptominingfarm.io/signup/?referrer=59B6C9A646E8B');
